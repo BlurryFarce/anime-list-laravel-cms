@@ -46,7 +46,7 @@ The application includes:
 12. **Edit Character**
     ![Edit Character Form](https://github.com/user-attachments/assets/a8976300-470c-4f48-9bf4-61b58f121a57)
 
-##Reflection on Laravel and this Course
+## Reflection on Laravel and this Course
 Developing with Laravel proved to be a significant improvement over working with vanilla PHP. The framework’s features streamlined development and allowed me to focus more on functionality, reminiscent of my experience with JavaScript frameworks, which I prefer and am more familiar with.
 
 The course covered the essential aspects of Laravel effectively. For further exploration, integrating Laravel with modern front-end frameworks like Vue.js could provide a more comprehensive full-stack development experience.
