@@ -1,66 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Anime and Character Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Intro to the Project
+This project is a web-based application built with Laravel for managing anime shows and their characters. It provides functionality for adding, editing, and deleting animes and characters, with a user-friendly interface for both public and admin users.
 
-## About Laravel
+## Features and Database Schema
+The application includes:
+- **CRUD Modules** for Anime and Characters:
+  - **Anime**: Title, Description, Episodes, Image URL, Status, Genre, Release Date.
+  - **Character**: Name, Bio, Image URL, Gender, Age, Anime ID (foreign key).
+- **Relationship**: Each anime can have multiple characters, forming a one-to-many relationship.
+- **Authentication**: Admin users can manage all CRUD operations, while regular users can view public information.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Database Schema:**
+- **Animes** Table: `id`, `title`, `description`, `episodes`, `image_url`, `status`, `genre`, `release_date`
+- **Characters** Table: `id`, `name`, `bio`, `image_url`, `gender`, `age`, `anime_id` (foreign key)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Screenshots
+1. **Home Page**
+   ![Home Page](https://github.com/user-attachments/assets/714cdb6e-3900-4802-9dad-8374396d096a)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. **Anime Index**
+   ![Anime Index](https://github.com/user-attachments/assets/9ca720f9-de5c-44f9-bb18-be48877e5814)
 
-## Learning Laravel
+5. **Anime Details**
+   ![Anime Details](https://github.com/user-attachments/assets/4c91857a-343f-4a2c-8b63-7414a425d96a)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+6. **Character Index**
+   ![Character Index](https://github.com/user-attachments/assets/f6d9a6e2-8ca8-4c39-b4f3-7342fc8fc7ac)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+7. **Character Details**
+   ![Character Details](https://github.com/user-attachments/assets/a930b7e4-3fd8-4a32-9f65-4a9469c0f7ba)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+8. **Admin Dashboard**
+   ![Admin Dashboard](https://github.com/user-attachments/assets/7eb9572f-b360-4d1a-a010-70f1baaebbc3)
 
-## Laravel Sponsors
+9. **Add Anime**
+   ![Create Anime Form](https://github.com/user-attachments/assets/e302d89d-e483-43dd-8ba5-d8f2acf60e69)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+10. **Edit Anime**
+   ![Edit Anime Form](https://github.com/user-attachments/assets/aa64cd4b-a4c5-4f52-aba7-e4e91c9e9e5f)
 
-### Premium Partners
+11. **Add Character**
+   ![Create Character Form](https://github.com/user-attachments/assets/c3cf17e4-83ab-45b8-9762-af7140843102)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+12. **Edit Character**
+    ![Edit Character Form](https://github.com/user-attachments/assets/a8976300-470c-4f48-9bf4-61b58f121a57)
 
-## Contributing
+##Reflection on Laravel and this Course
+Developing with Laravel proved to be a significant improvement over working with vanilla PHP. The framework’s features streamlined development and allowed me to focus more on functionality, reminiscent of my experience with JavaScript frameworks, which I prefer and am more familiar with.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The course covered the essential aspects of Laravel effectively. For further exploration, integrating Laravel with modern front-end frameworks like Vue.js could provide a more comprehensive full-stack development experience.
