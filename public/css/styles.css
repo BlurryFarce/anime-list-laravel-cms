@@ -11,10 +11,6 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .cards-container {
@@ -24,7 +20,12 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
-
+.container-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 header {
     background: #333;
     color: #fff;
@@ -63,7 +64,16 @@ footer {
     flex-direction: column;
     width: 60%;
 }
-
+.card-details{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0.5rem 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
 .card img {
     width: 100%;
     height: auto;

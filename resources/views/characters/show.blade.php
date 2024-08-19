@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="card">
+    <div class="container-details">
+        <div class="card-details">
             <img src="{{ $character->image_url }}" alt="{{ $character->name }}">
             <div class="card-body">
                 <h1 class="card-title">{{ $character->name }}</h1>

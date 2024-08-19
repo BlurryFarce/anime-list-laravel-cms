@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container flex justify-center align-middle">
-        <div class="card">
+    <div class="container-details">
+        <div class="card-details">
             <img src="{{ $anime->image_url }}" alt="{{ $anime->title }}">
             <div class="card-body">
                 <h1 class="card-title">{{ $anime->title }}</h1>
@@ -12,7 +12,6 @@
                 <p><strong>Genre:</strong> {{ $anime->genre }}</p>
                 <p><strong>Release Date:</strong> {{ $anime->release_date }}</p>
                 <a href="{{ route('animes.index') }}" class="btn btn-primary">Back to List</a>
-
                 @auth
                     @if(auth()->user()->is_admin) <!-- Assuming `is_admin` is a boolean attribute -->
                         <a href="{{ route('admin.animes.edit', $anime->id) }}" class="btn btn-secondary">Edit</a>
