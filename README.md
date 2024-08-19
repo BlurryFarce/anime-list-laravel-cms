@@ -1,19 +1,49 @@
 # Anime and Character Management System
 
 ## Intro to the Project
-This project is a web-based application built with Laravel for managing anime shows and their characters. It provides functionality for adding, editing, and deleting animes and characters, with a user-friendly interface for both public and admin users.
+This project is a web-based application built with Laravel for managing anime shows and their characters. It provides a comprehensive solution for adding, editing, and deleting animes and characters. The application is designed to be user-friendly, with distinct interfaces for public and admin users.
 
 ## Features and Database Schema
-The application includes:
-- **CRUD Modules** for Anime and Characters:
-  - **Anime**: Title, Description, Episodes, Image URL, Status, Genre, Release Date.
-  - **Character**: Name, Bio, Image URL, Gender, Age, Anime ID (foreign key).
-- **Relationship**: Each anime can have multiple characters, forming a one-to-many relationship.
-- **Authentication**: Admin users can manage all CRUD operations, while regular users can view public information.
 
-**Database Schema:**
-- **Animes** Table: `id`, `title`, `description`, `episodes`, `image_url`, `status`, `genre`, `release_date`
-- **Characters** Table: `id`, `name`, `bio`, `image_url`, `gender`, `age`, `anime_id` (foreign key)
+### CRUD Modules
+The application includes two main CRUD modules:
+
+#### 1. Anime Management
+- **Create:** Admins can add new anime entries with details such as Title, Description, Episodes, Image URL, Status, Genre, and Release Date.
+- **Read:** Users can view a list of all animes and detailed information about each anime.
+- **Update:** Admins can edit existing anime details.
+- **Delete:** Admins can delete an anime entry.
+
+#### 2. Character Management
+- **Create:** Admins can add new characters with details such as Name, Bio, Image URL, Gender, Age, and Anime ID (foreign key).
+- **Read:** Users can view a list of characters and detailed information about each character.
+- **Update:** Admins can edit existing character details.
+- **Delete:** Admins can delete a character entry.
+
+### Relationships
+- **One-to-Many Relationship:** Each anime can have multiple characters. The `anime_id` foreign key in the `characters` table establishes this relationship.
+
+### Authentication
+- **Admin Users:** Have full access to CRUD operations for both animes and characters. They can manage content through the admin dashboard.
+- **Public Users:** Can view animes and characters but cannot perform any other operations.
+
+### Database Schema
+- **Animes Table:** Contains columns for `id`, `title`, `description`, `episodes`, `image_url`, `status`, `genre`, and `release_date`.
+- **Characters Table:** Contains columns for `id`, `name`, `bio`, `image_url`, `gender`, `age`, and `anime_id` (foreign key).
+
+## Implementation Details
+
+### CRUD Modules
+- Admin routes are protected using middleware to restrict access to authorized users.
+
+### Authentication
+- Admin users are seeded in the database to test CRUD functionalities.
+- Middleware is used to differentiate between admin and public user roles.
+
+### Dashboard and Views
+- Created a dedicated admin dashboard for managing content.
+- Designed public views for listing and viewing detailed information about animes and characters.
+- The admin interface includes forms for creating and editing records.
 
 ## Screenshots
 1. **Home Page**
